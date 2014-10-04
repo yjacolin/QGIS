@@ -192,6 +192,22 @@ QgsTipFactory::QgsTipFactory() : QObject()
                         " installed via this same menu. Don't miss out on all QGIS has to offer!"
 			" Check out the plugins and see what they can do for you." ) );
   addGenericTip( myTip );
+  // by yjacolin
+  myTip.setTitle(tr("QGIS makes me dizzy!"));
+  myTip.setContent(tr("QGIS has easter eggs hidden inside. Write 'dizzy' without the quote in"
+                      "coordinate input in the status bar and see what happen in the map "
+                      "canvas. You can also try 'retro'. To stop it, just write 'dizzy' or "
+                      "'retro' again."
+        ));
+  addGuiTip(myTip);
+  // by yjacolin
+  myTip.setTitle(tr("Add an action to layer"));
+  myTip.setContent(tr("Action in a layer allow user to trigger action when clicking on a geometry"
+                      " with 'Run Feature Action' tools."
+                      "For example, you can open an html page using the field value of the geometry "
+                      "as a parameter. Look at the <a href='http://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/vector_properties.html?#actions-menu'>documentation</a>."
+        ));
+  addGuiTip(myTip);
 
   /* Template for adding more tips
   myTip.setTitle(tr(""));
